@@ -1,0 +1,234 @@
+
+.bg-full{
+    position: relative;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    z-index: 1;
+}
+
+.header h1{
+    color: white;
+    position: absolute;
+    top: 0px;
+    left: 18px;
+    width: 100%;
+    height: 100%;
+    font-size: 4rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.hippo-logo path {
+    fill: white;
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+.hippo-logo {
+    position: absolute;
+    z-index: 1;
+    width: 75px;
+    top: 62px;
+    left: 528px;
+    animation: flip 2s ease 1.75s 1;
+}
+
+.container{
+    position: absolute;
+    top: 165px;
+    left: 375px;
+    height: auto;
+    width: 100%; 
+    max-width: 700px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 5px 5px 4px 1px rgba(130, 130, 130, 0.6);
+    z-index: 1;
+    background: rgba(255,255,255,0.55);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.275);
+}
+
+.para{
+    word-break: break-all;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    margin-top: 0px;
+}
+
+#para span{
+    position: relative;
+}
+
+#para span.active::before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background-color: black;
+    animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+    50%{
+        opacity: 1;
+    }
+}
+
+#para span.correct{
+    color : green;
+}
+
+#para span.incorrect{
+    color: red;
+}
+
+.container input{
+    z-index: -10;
+    position: absolute;
+    opacity: 0;
+}
+
+.container-in{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+}
+
+.result{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    width: 80%;
+}
+
+.txt1{
+    font-size: 14px;
+    margin: 5px;
+    padding: 0px;
+}
+
+.txt2{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 50px;
+}
+
+.result div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 10px;
+}
+
+.container-in button{
+    background-color: yellowgreen;
+    color: navy;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+    color: white;
+    background: #202731;
+    overflow-x: hidden;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 395px;
+    padding-top: 50px;
+}
+
+.pink {
+    background: #ff0066;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(103% + 1.3px);
+    height: 262px;
+}
+
+.wave .shape-fill {
+    fill: hsl(240, 3%, 6%);
+}
+
+.spacer {
+    aspect-ratio: 960/173;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+.top-bg {
+    background-image: url('./top-bg.svg');
+}
+
+.flip {
+    transform: rotate(180deg);
+}
+
+.blob-motion {
+    position: absolute;
+    transform: translateY(-20%);
+    z-index: 0;
+}
+
+.blob-content {
+    z-index: 1;
+}
+
+.blobs {
+    width: 100%;
+    background: url('./blobs.svg') no-repeat bottom / cover;
+}
